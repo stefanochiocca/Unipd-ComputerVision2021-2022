@@ -1,0 +1,409 @@
+Microsoft Windows [Version 10.0.19044.1826]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Ralton\Downloads\TMP\egohands_data\croped_2.0>C:\Users\Ralton\Downloads\TMP\opencv\build\x64\vc15\bin\opencv_createsamples.exe -info hands_over_face_pos.txt -w 50 -h 50 -num 490 -vec hands_over_face_pos_50.vec
+Info file name: hands_over_face_pos.txt
+Img file name: (NULL)
+Vec file name: hands_over_face_pos_50.vec
+BG  file name: (NULL)
+Num: 490
+BG color: 0
+BG threshold: 80
+Invert: FALSE
+Max intensity deviation: 40
+Max x angle: 1.1
+Max y angle: 1.1
+Max z angle: 0.5
+Show samples: FALSE
+Width: 50
+Height: 50
+Max Scale: -1
+RNG Seed: 12345
+Create training samples from images collection...
+Done. Created 490 samples
+
+C:\Users\Ralton\Downloads\TMP\egohands_data\croped_2.0>C:\Users\Ralton\Downloads\TMP\opencv\build\x64\vc15\bin\opencv_traincascade.exe  -data cascade_hands_over_face_50 -vec hands_over_face_pos_50.vec -bg negatives_expanded_hands_over_face.txt -w 50 -h 50 -numPos 480 -numNeg 8000 -numStages 25 -featureType LBP -precalcValBufSize 3500 -precalcIdxBufSize 3500 -minHitRate 0.999 -maxFalseAlarmRate 0.3 -mode ALL -acceptanceRatioBreakValue 10e-5
+PARAMETERS:
+cascadeDirName: cascade_hands_over_face_50
+vecFileName: hands_over_face_pos_50.vec
+bgFileName: negatives_expanded_hands_over_face.txt
+numPos: 480
+numNeg: 8000
+numStages: 25
+precalcValBufSize[Mb] : 3500
+precalcIdxBufSize[Mb] : 3500
+acceptanceRatioBreakValue : 0.0001
+stageType: BOOST
+featureType: LBP
+sampleWidth: 50
+sampleHeight: 50
+boostType: GAB
+minHitRate: 0.999
+maxFalseAlarmRate: 0.3
+weightTrimRate: 0.95
+maxDepth: 1
+maxWeakCount: 100
+Number of unique features given windowSize [50,50] : 166464
+
+===== TRAINING 0-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 1
+Precalculation time: 51.976
++----+---------+---------+
+|  N |    HR   |    FA   |
++----+---------+---------+
+|   1|        1|        1|
++----+---------+---------+
+|   2|        1|        1|
++----+---------+---------+
+|   3|        1|        1|
++----+---------+---------+
+|   4|        1| 0.554625|
++----+---------+---------+
+|   5|        1|  0.39325|
++----+---------+---------+
+|   6|        1| 0.272125|
++----+---------+---------+
+END>
+Training until now has taken 0 days 0 hours 6 minutes 20 seconds.
+
+===== TRAINING 1-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 0.22636
+Precalculation time: 51.554
++----+---------+---------+
+|  N |    HR   |    FA   |
++----+---------+---------+
+|   1|        1|        1|
++----+---------+---------+
+|   2|        1|        1|
++----+---------+---------+
+|   3|        1|        1|
++----+---------+---------+
+|   4|        1|        1|
++----+---------+---------+
+|   5|        1| 0.771125|
++----+---------+---------+
+|   6|        1| 0.639875|
++----+---------+---------+
+|   7|        1| 0.433875|
++----+---------+---------+
+^C
+C:\Users\Ralton\Downloads\TMP\egohands_data\croped_2.0>C:\Users\Ralton\Downloads\TMP\opencv\build\x64\vc15\bin\opencv_traincascade.exe  -data cascade_hands_over_face_50 -vec hands_over_face_pos_50.vec -bg negatives_expanded_hands_over_face.txt -w 50 -h 50 -numPos 480 -numNeg 8000 -numStages 25 -featureType LBP -precalcValBufSize 3500 -precalcIdxBufSize 3500 -minHitRate 0.999 -maxFalseAlarmRate 0.3 -mode ALL -acceptanceRatioBreakValue 10e-5
+---------------------------------------------------------------------------------
+Training parameters are pre-loaded from the parameter file in data folder!
+Please empty this folder if you want to use a NEW set of training parameters.
+---------------------------------------------------------------------------------
+PARAMETERS:
+cascadeDirName: cascade_hands_over_face_50
+vecFileName: hands_over_face_pos_50.vec
+bgFileName: negatives_expanded_hands_over_face.txt
+numPos: 480
+numNeg: 8000
+numStages: 25
+precalcValBufSize[Mb] : 3500
+precalcIdxBufSize[Mb] : 3500
+acceptanceRatioBreakValue : 0.0001
+stageType: BOOST
+featureType: LBP
+sampleWidth: 50
+sampleHeight: 50
+boostType: GAB
+minHitRate: 0.999
+maxFalseAlarmRate: 0.3
+weightTrimRate: 0.95
+maxDepth: 1
+maxWeakCount: 100
+Number of unique features given windowSize [50,50] : 166464
+
+Stage 0 is loaded
+
+===== TRAINING 1-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 0.228565
+Precalculation time: 50.02
++----+---------+---------+
+|  N |    HR   |    FA   |
++----+---------+---------+
+|   1|        1|        1|
++----+---------+---------+
+|   2|        1|        1|
++----+---------+---------+
+|   3|        1|        1|
++----+---------+---------+
+|   4|        1|        1|
++----+---------+---------+
+|   5|        1| 0.744125|
++----+---------+---------+
+|   6|        1| 0.522125|
++----+---------+---------+
+|   7|        1|    0.537|
++----+---------+---------+
+|   8|        1|   0.4005|
++----+---------+---------+
+|   9|        1| 0.294375|
++----+---------+---------+
+END>
+Training until now has taken 0 days 0 hours 8 minutes 10 seconds.
+
+===== TRAINING 2-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 0.0893885
+Precalculation time: 62.052
++----+---------+---------+
+|  N |    HR   |    FA   |
++----+---------+---------+
+|   1|        1|        1|
++----+---------+---------+
+|   2|        1|        1|
++----+---------+---------+
+|   3|        1|        1|
++----+---------+---------+
+|   4|        1|        1|
++----+---------+---------+
+|   5|        1|  0.82375|
++----+---------+---------+
+|   6|        1| 0.827625|
++----+---------+---------+
+|   7|        1| 0.603125|
++----+---------+---------+
+|   8|        1| 0.407375|
++----+---------+---------+
+|   9|        1|  0.37625|
++----+---------+---------+
+|  10|        1|    0.289|
++----+---------+---------+
+END>
+Training until now has taken 0 days 0 hours 17 minutes 5 seconds.
+
+===== TRAINING 3-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 0.0354374
+Precalculation time: 48.707
++----+---------+---------+
+|  N |    HR   |    FA   |
++----+---------+---------+
+|   1|        1|        1|
++----+---------+---------+
+|   2|        1|        1|
++----+---------+---------+
+|   3|        1|        1|
++----+---------+---------+
+|   4|        1| 0.849375|
++----+---------+---------+
+|   5|        1|   0.6465|
++----+---------+---------+
+|   6|        1| 0.733625|
++----+---------+---------+
+|   7|        1|  0.55475|
++----+---------+---------+
+|   8|        1|   0.4085|
++----+---------+---------+
+|   9|        1| 0.470125|
++----+---------+---------+
+|  10|        1|     0.35|
++----+---------+---------+
+|  11|        1|    0.306|
++----+---------+---------+
+|  12|        1|   0.2045|
++----+---------+---------+
+END>
+Training until now has taken 0 days 0 hours 27 minutes 10 seconds.
+
+===== TRAINING 4-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 0.0243075
+Precalculation time: 48.751
++----+---------+---------+
+|  N |    HR   |    FA   |
++----+---------+---------+
+|   1|        1|        1|
++----+---------+---------+
+|   2|        1|        1|
++----+---------+---------+
+|   3|        1|        1|
++----+---------+---------+
+|   4|        1| 0.901625|
++----+---------+---------+
+|   5|        1| 0.760375|
++----+---------+---------+
+|   6|        1| 0.638625|
++----+---------+---------+
+|   7|        1|    0.544|
++----+---------+---------+
+|   8|        1| 0.505625|
++----+---------+---------+
+|   9|        1|    0.482|
++----+---------+---------+
+|  10|        1| 0.371375|
++----+---------+---------+
+|  11|        1| 0.445625|
++----+---------+---------+
+|  12|        1| 0.336625|
++----+---------+---------+
+|  13|        1| 0.333125|
++----+---------+---------+
+|  14|        1| 0.230625|
++----+---------+---------+
+END>
+Training until now has taken 0 days 0 hours 37 minutes 38 seconds.
+
+===== TRAINING 5-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 0.0058932
+Precalculation time: 48.805
++----+---------+---------+
+|  N |    HR   |    FA   |
++----+---------+---------+
+|   1|        1|        1|
++----+---------+---------+
+|   2|        1|        1|
++----+---------+---------+
+|   3|        1|        1|
++----+---------+---------+
+|   4|        1|        1|
++----+---------+---------+
+|   5|        1|  0.84825|
++----+---------+---------+
+|   6|        1|   0.9235|
++----+---------+---------+
+|   7|        1|  0.77925|
++----+---------+---------+
+|   8|        1| 0.650375|
++----+---------+---------+
+|   9|        1| 0.507875|
++----+---------+---------+
+|  10|        1|  0.42725|
++----+---------+---------+
+|  11|        1| 0.266875|
++----+---------+---------+
+END>
+Training until now has taken 0 days 0 hours 47 minutes 4 seconds.
+
+===== TRAINING 6-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 0.00149202
+Precalculation time: 48.538
++----+---------+---------+
+|  N |    HR   |    FA   |
++----+---------+---------+
+|   1|        1|        1|
++----+---------+---------+
+|   2|        1|        1|
++----+---------+---------+
+|   3|        1|        1|
++----+---------+---------+
+|   4|        1|        1|
++----+---------+---------+
+|   5|        1| 0.885375|
++----+---------+---------+
+|   6|        1|   0.7405|
++----+---------+---------+
+|   7|        1|    0.601|
++----+---------+---------+
+|   8|        1|  0.45925|
++----+---------+---------+
+|   9|        1|  0.55175|
++----+---------+---------+
+|  10|        1| 0.443375|
++----+---------+---------+
+|  11|        1| 0.359625|
++----+---------+---------+
+|  12|        1| 0.273125|
++----+---------+---------+
+END>
+Training until now has taken 0 days 0 hours 57 minutes 38 seconds.
+
+===== TRAINING 7-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 0.000548514
+Precalculation time: 48.599
++----+---------+---------+
+|  N |    HR   |    FA   |
++----+---------+---------+
+|   1|        1|        1|
++----+---------+---------+
+|   2|        1|        1|
++----+---------+---------+
+|   3|        1|        1|
++----+---------+---------+
+|   4|        1|        1|
++----+---------+---------+
+|   5|        1|   0.9205|
++----+---------+---------+
+|   6|        1|   0.7335|
++----+---------+---------+
+|   7|        1|    0.624|
++----+---------+---------+
+|   8|        1|  0.65575|
++----+---------+---------+
+|   9|        1|  0.64625|
++----+---------+---------+
+|  10|        1| 0.793375|
++----+---------+---------+
+|  11|        1| 0.654625|
++----+---------+---------+
+|  12|        1| 0.535375|
++----+---------+---------+
+|  13|        1| 0.417625|
++----+---------+---------+
+|  14|        1|  0.29525|
++----+---------+---------+
+END>
+Training until now has taken 0 days 1 hours 10 minutes 11 seconds.
+
+===== TRAINING 8-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 0.000196587
+Precalculation time: 48.73
++----+---------+---------+
+|  N |    HR   |    FA   |
++----+---------+---------+
+|   1|        1|        1|
++----+---------+---------+
+|   2|        1|        1|
++----+---------+---------+
+|   3|        1|        1|
++----+---------+---------+
+|   4|        1| 0.932625|
++----+---------+---------+
+|   5|        1| 0.838375|
++----+---------+---------+
+|   6|        1| 0.692625|
++----+---------+---------+
+|   7|        1| 0.663875|
++----+---------+---------+
+|   8|        1|   0.5535|
++----+---------+---------+
+|   9|        1|    0.521|
++----+---------+---------+
+|  10|        1| 0.429125|
++----+---------+---------+
+|  11|        1| 0.352375|
++----+---------+---------+
+|  12|        1| 0.348375|
++----+---------+---------+
+|  13|        1|    0.301|
++----+---------+---------+
+|  14|        1|  0.22125|
++----+---------+---------+
+END>
+Training until now has taken 0 days 1 hours 25 minutes 16 seconds.
+
+===== TRAINING 9-stage =====
+<BEGIN
+POS count : consumed   480 : 480
+NEG count : acceptanceRatio    8000 : 4.83011e-05
+The required acceptanceRatio for the model has been reached to avoid overfitting of trainingdata. Branch training terminated.
+
+C:\Users\Ralton\Downloads\TMP\egohands_data\croped_2.0>
